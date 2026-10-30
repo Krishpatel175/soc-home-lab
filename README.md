@@ -11,7 +11,7 @@ A virtualized Security Operations Center (SOC) lab built to practice log collect
 ```mermaid
 flowchart LR
     K["Kali Linux<br/>192.168.10.30<br/>(Attacker)"] -- simulated attacks --> W
-    W["Windows 10/11<br/>192.168.10.20<br/>Sysmon + Universal Forwarder"] -- "logs over TCP 9997" --> S
+    W["Windows 10<br/>192.168.10.20<br/>Sysmon + Universal Forwarder"] -- "logs over TCP 9997" --> S
     S["Ubuntu Server 24.04<br/>192.168.10.10<br/>Splunk Enterprise"]
     A["Analyst<br/>(browser)"] -- "Splunk Web :8000" --> S
 ```
@@ -21,7 +21,7 @@ All VMs sit on an isolated VirtualBox **Internal Network** (`192.168.10.0/24`). 
 | Host | OS | IP | Role | Resources |
 |---|---|---|---|---|
 | splunk-server | Ubuntu Server 24.04 LTS | 192.168.10.10 | SIEM (Splunk Enterprise 10.6) | 4 vCPU / 4 GB |
-| Practice | Windows 10/11 | 192.168.10.20 | Monitored endpoint | 4 vCPU / 4 GB |
+| Practice | Windows 10 | 192.168.10.20 | Monitored endpoint | 4 vCPU / 5 GB |
 | kali | Kali Linux | 192.168.10.30 | Attack simulation | 2 vCPU / 2 GB |
 
 ---
@@ -43,7 +43,7 @@ All VMs sit on an isolated VirtualBox **Internal Network** (`192.168.10.0/24`). 
 
 | # | Detection | MITRE ATT&CK | Data Source | Status |
 |---|---|---|---|---|
-| 1 | [Brute Force — Multiple Failed Logons](detections/T1110-brute-force.md) | T1110 | Security 4625 | ✅ |
+| 1 | [Brute Force — Multiple Failed Logons](detections/T1110-brute-force.md) | T1110 | Security 4625 | 🚧 Testing |
 | 2 | New Local User Created | T1136.001 | Security 4720 | 🔜 |
 | 3 | User Added to Privileged Group | T1098 | Security 4732 | 🔜 |
 | 4 | Suspicious PowerShell (encoded / download cradle) | T1059.001 | Sysmon 1, PowerShell 4104 | 🔜 |
