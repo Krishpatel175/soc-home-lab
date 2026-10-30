@@ -37,11 +37,21 @@ index=wineventlog EventCode=4625
 ## Testing
 
 1. Created a test account on the endpoint: `net user labuser <password> /add`
-2. Generated ~10 failed logons with `runas /user:labuser cmd` using wrong passwords.
-3. Confirmed Event ID 4625 events arrived in Splunk and the alert fired in **Activity → Triggered Alerts**.
+2. Generated 10 failed logons with `runas /user:labuser cmd` using wrong passwords.
+3. Confirmed the Event ID 4625 events arrived in Splunk and the alert fired.
+
+**Results (2026-10-30):**
+
+| Observation | Value |
+|---|---|
+| Failed logons generated | 10 in ~65 seconds (10:52:44 – 10:53:52) |
+| Target account | `labuser` on host `Practice` |
+| Logon type | 2 (interactive) |
+| Failure reason | Unknown user name or bad password |
+| Alert fired | 2026-10-30 11:20:01 EDT |
 
 ![4625 search results](../screenshots/07-4625-results.png)
-![Alert configuration](../screenshots/08-alert-config.png)
+
 ![Triggered alert](../screenshots/09-triggered-alert.png)
 
 ## Useful 4625 Fields
