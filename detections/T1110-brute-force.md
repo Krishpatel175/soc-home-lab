@@ -48,9 +48,12 @@ index=wineventlog EventCode=4625
 | Target account | `labuser` on host `Practice` |
 | Logon type | 2 (interactive) |
 | Failure reason | Unknown user name or bad password |
-| Alert fired | 2026-10-30 11:20:01 EDT |
+| Alert saved | 2026-10-30 11:14:59 EDT |
+| Alert fired | 2026-10-30 11:20:01 EDT, on a repeat run of the test after the alert was saved |
 
 ![4625 search results](../screenshots/07-4625-results.png)
+
+![Alert configuration](../screenshots/08-alert-config.png)
 
 ![Triggered alert](../screenshots/09-triggered-alert.png)
 
