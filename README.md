@@ -44,7 +44,7 @@ All VMs sit on an isolated VirtualBox **Internal Network** (`192.168.10.0/24`). 
 | # | Detection | MITRE ATT&CK | Data Source | Status |
 |---|---|---|---|---|
 | 1 | [Brute Force — Multiple Failed Logons](detections/T1110-brute-force.md) | T1110 | Security 4625 | ✅ |
-| 2 | New Local User Created | T1136.001 | Security 4720 | 🔜 |
+| 2 | [New Local User Created](detections/T1136.001-new-local-user.md) | T1136.001 | Security 4720 | ✅ |
 | 3 | User Added to Privileged Group | T1098 | Security 4732 | 🔜 |
 | 4 | Suspicious PowerShell (encoded / download cradle) | T1059.001 | Sysmon 1, PowerShell 4104 | 🔜 |
 | 5 | Scheduled Task Persistence | T1053.005 | Security 4698 | 🔜 |
@@ -73,7 +73,8 @@ soc-home-lab/
 ├── configs/
 │   └── inputs.conf          # Universal Forwarder log inputs
 ├── detections/
-│   └── T1110-brute-force.md # one write-up per detection
+│   ├── T1110-brute-force.md # one write-up per detection
+│   └── T1136.001-new-local-user.md
 └── screenshots/
 ```
 
