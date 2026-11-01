@@ -46,7 +46,7 @@ All VMs sit on an isolated VirtualBox **Internal Network** (`192.168.10.0/24`). 
 | 1 | [Brute Force — Multiple Failed Logons](detections/T1110-brute-force.md) | T1110 | Security 4625 | ✅ |
 | 2 | [New Local User Created](detections/T1136.001-new-local-user.md) | T1136.001 | Security 4720 | ✅ |
 | 3 | [User Added to Privileged Group](detections/T1098-privileged-group.md) | T1098 | Security 4732 | ✅ |
-| 4 | Suspicious PowerShell (encoded / download cradle) | T1059.001 | Sysmon 1, PowerShell 4104 | 🔜 |
+| 4 | [Suspicious PowerShell (encoded / hidden)](detections/T1059.001-suspicious-powershell.md) | T1059.001 | Sysmon 1, PowerShell 4104 | ✅ |
 | 5 | Scheduled Task Persistence | T1053.005 | Security 4698 | 🔜 |
 | 6 | New Service Installed | T1543.003 | System 7045 | 🔜 |
 
@@ -75,7 +75,8 @@ soc-home-lab/
 ├── detections/
 │   ├── T1110-brute-force.md # one write-up per detection
 │   ├── T1136.001-new-local-user.md
-│   └── T1098-privileged-group.md
+│   ├── T1098-privileged-group.md
+│   └── T1059.001-suspicious-powershell.md
 └── screenshots/
 ```
 
